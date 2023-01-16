@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>STUDENT GRADE CHECKER</h1>
+   <div class="container"> 
+    <label for="name">Name</label>
+    <input type="text" name="" id="name" placeholder="Faruq Damilare"> <br> <br>
+    <label for="deg"> Degree</label>
+    <input type="text" id="deg" placeholder="Computer Science"> <br> <br>
+    <label for="score">Input Score</label>
+        <input type="text" id="score" placeholder="Your Grade" > <br> <br>
+        <button onclick="grade()">GET GRADE</button>
+    </div>  
+    <h1 id="grade"></h1>
+
+    
+    <div id="exp">
+        <p>A equals 70 - 100</p>
+        <p>B equals 60 - 69</p>
+        <p>C equals 50 - 59</p>
+        <p>D equals 45 - 49</p>
+        <p>F equals less than 45</p>
+    </div>
+    <script>
+        function grade(){
+            let score = document.getElementById('score').value;
+            if (score >= 70 && score <= 100){
+                document.getElementById('grade').innerHTML = 'A'
+            }
+
+          else if(score >= 60 && score <= 69){
+            document.getElementById('grade').innerHTML = "B"
+          }   
+
+          
+          else if(score >= 50 && score <= 59){
+            document.getElementById('grade').innerHTML = "C"
+          }   
+
+          
+          else if(score >= 45 && score <= 49){
+            document.getElementById('grade').innerHTML = "D"
+          }   
+
+          
+          else if(score < 45 ){
+            document.getElementById('grade').innerHTML = "Fail"
+          }   
+
+        }
+
+    </script>
+    
+</body>
+</html>

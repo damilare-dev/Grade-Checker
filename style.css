@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+h1{
+    padding: 30px 10px;
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.container{
+    margin-left: 10%;
+}
+
+#grade{
+    text-align: center;
+    font-size: 60px;
+    background-color: rgba(0, 0, 255, 0.274);
+}
+
+#exp{
+    background-color: gray;
+    width: fit-content;
+    position: relative;
+    left: 70%;
+    top: -70%;
+}
+
+#exp p{
+    padding: 20px;
+    font-weight: 1000;
+    font-size: 22px;
+}
+
+body{
+    background-color: gainsboro;
+}
+
+input{
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    border-radius: 60px;
+    box-shadow: inset -6px 6px 13px #fff,
+                inset 6px 6px 13px rgba(0,0,0,.16);
+}
+
+label{
+    font-weight: 900;
+    font-size: 25px;
+}
+
+button{
+    padding: 8px;
+    border-radius: 30px;
+    background-color: green;
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: inset 6px 6px 13px rgb(83, 48, 48),
+    6px 6px 13px rgba(0,0,0,.16);
+}
+
+@media(max-width:900px){
+    #exp{
+        display: none;
+    }
+}
