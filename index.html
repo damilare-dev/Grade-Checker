@@ -3,33 +3,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grade Checker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>STUDENT GRADE CHECKER</h1>
+  <h1 id="stud">STUDENT GRADE CHECKER</h1>
    <div class="container"> 
-    <label for="name">Name</label>
-    <input type="text" name="" id="name" placeholder="Faruq Damilare"> <br> <br>
-    <label for="deg"> Degree</label>
-    <input type="text" id="deg" placeholder="Computer Science"> <br> <br>
-    <label for="score">Input Score</label>
+    <div class="row">
+      <label for="name">NAME </label>
+        <input type="text" name="" id="name" placeholder="Faruq Damilare"> <br> <br>
+
+      <label for="deg"> DEPT.</label>
+        <input type="text" id="deg" placeholder="Computer Science"> <br> <br>
+
+      <label for="score">SCORE</label>
         <input type="text" id="score" placeholder="Your Grade" > <br> <br>
+      </div>  
+
         <button onclick="grade()">GET GRADE</button>
     </div>  
+
     <h1 id="grade"></h1>
 
     
     <div id="exp">
-        <p>A equals 70 - 100</p>
-        <p>B equals 60 - 69</p>
-        <p>C equals 50 - 59</p>
-        <p>D equals 45 - 49</p>
-        <p>F equals less than 45</p>
+        <p>A equals 70 - 100</p> 
+       <hr> <p>B equals 60 - 69</p> 
+       <hr> <p>C equals 50 - 59</p>
+       <hr> <p>D equals 45 - 49</p>
+       <hr> <p>F equals less than 45</p> 
     </div>
+
+    <marquee behavior="" direction=""><q>Pushing you beyond your limits</q></marquee>
     <script>
         function grade(){
-            let score = document.getElementById('score').value;
+          let score = document.getElementById('score').value;
             if (score >= 70 && score <= 100){
                 document.getElementById('grade').innerHTML = 'A'
             }
@@ -52,7 +60,9 @@
           else if(score < 45 ){
             document.getElementById('grade').innerHTML = "Fail"
           }   
-
+           if(score > 100){
+            document.getElementById('grade').innerHTML = "Invalid Score"
+           }
         }
 
     </script>
